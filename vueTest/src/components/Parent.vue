@@ -1,12 +1,13 @@
 <template>
   <div class="parent">
     <h1>父组件</h1>
-    <Child v-on:childToParentMsg="showChildToParentMsg" ></Child>
+    <div>{{msg}}</div>
+    <Child @childToParentMsg="getData" ></Child>
   </div>
 </template>
 <script>
+import Child from './Child'
 export default {
-  import Child from './Child.vue'
   name: 'parent',
   data () {
     return {
@@ -14,8 +15,9 @@ export default {
     }
   },
   methods: {
-    showChildToParentMsg:function(data){
-      alert("父组件显示信息："+data);
+    getData: function (data) {
+      this.msg = data
+      alert('父组件显示信息：' + data)
     }
   },
   components: {Child}

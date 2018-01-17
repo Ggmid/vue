@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <router-view class="one"></router-view>
-    <router-view class="two" name="hello"></router-view>
-    <router-view class="two" name="found"></router-view>
+    <router-view class="three" name="found"></router-view>
   </div>
 </template>
 

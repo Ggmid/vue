@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Found from '@/components/Found'
-import Hello from '@/components/Hello'
 import Login from '@/components/Login'
+import Child from '@/components/Child'
+import Parent from '@/components/Parent'
 Vue.use(Router)
 
 export default new Router({
@@ -12,8 +12,8 @@ export default new Router({
       name: 'Login',
       components: {
         default: Login,
-        hello: Hello,
-        found: Found
+        hello: Child,
+        found: Parent
       }
     }
   ]
