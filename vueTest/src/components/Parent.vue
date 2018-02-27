@@ -2,7 +2,7 @@
   <div class="parent">
     <h1>父组件</h1>
     <div>{{msg}}</div>
-    <Child @childToParentMsg="getData" ></Child>
+    <Child @childToParentMsg="getData" v-bind:parentToChild="data"></Child>
   </div>
 </template>
 <script>
@@ -11,7 +11,8 @@ export default {
   name: 'parent',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      data: 'hahahahah'
     }
   },
   methods: {

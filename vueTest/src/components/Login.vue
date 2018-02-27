@@ -1,13 +1,16 @@
-
 <template>
   <div class = "found">
-    <div class = "name">
-      <span>用户名：</span>
-      <input type="text" name="" v-model="username" @click="fuck">
+    <div class = "name btn">
+      <span class="label">用户名：</span>
+      <input type="text" name="" v-model="username">
     </div>
     <div class="pwd">
-      <span>密码：</span>
+      <span class="label">密码：</span>
       <input type="password" name="" v-model="password">
+      <div>{{password}}</div>
+    </div>
+    <div class="btn">
+      <router-link to="/parent"><button>登录</button></router-link>
     </div>
   </div>
 </template>
@@ -23,7 +26,7 @@
       }
     },
     methods: {
-      fuck: function () {
+      submit: function () {
         alert(1)
       }
     },
@@ -35,15 +38,32 @@
         return this.firstname + 'dsghj' + this.lastname
       }
     }
-
   }
 </script>
 
 <style scoped>
   .pwd{
     margin-top:30px;
+    overflow:hidden;
   }
   .btn{
     margin-top:30px;
+    overflow:hidden;
+  }
+  .found{
+    width:100%;
+    height:100%;
+    background: url(../assets/banner.jpg) no-repeat center; 
+    background-size: cover;
+    overflow:hidden;
+  }
+  .label{
+
+  }
+  input{
+    line-height: 3;
+    border-radius: 5px;
+    border:none;
+    outline:none;
   }
 </style>
