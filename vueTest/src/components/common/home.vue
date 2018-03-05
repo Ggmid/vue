@@ -1,6 +1,6 @@
 <template>
 	<div class="homeBox">
-		<navBar></navBar>
+		<navBar ref="haha"></navBar>
 		<router-view></router-view>
 		<div class="navBottom">此实例仅供个人娱乐</div>
 	</div>
@@ -9,8 +9,16 @@
 <script>
 	import navBar from './navBar'
 	export default {
+		data () {
+			return {
+				inter: "lala"
+			}
+		},
         components:{
             navBar
+        },
+        created: function(){
+        	//console.log(this.$refs);
         }
     }
 </script>

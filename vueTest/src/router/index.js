@@ -20,6 +20,10 @@ export default new Router({
     	component: Home,
     	children: [
     		{
+    			path: '/',
+    			component: Choice
+    		},
+    		{
     			path: '/choice',
     			component: Choice
     		},

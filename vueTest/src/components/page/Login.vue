@@ -1,16 +1,18 @@
 
 <template>
-  <el-form label-width="0px" class="demo-ruleForm">
-    <el-form-item >
-        <el-input v-model="username" placeholder="username"></el-input>
-    </el-form-item>
-    <el-form-item>
-        <el-input type="password" placeholder="password" v-model="password" ></el-input>
-    </el-form-item>
-    <div class="login-btn">
-        <el-button type="primary" @click="login">登录</el-button>
-    </div>
-	</el-form>
+	<div class="formBox">
+			<el-form label-width="0px" class="demo-ruleForm">
+		    <el-form-item >
+		        <el-input v-model="username" placeholder="username"></el-input>
+		    </el-form-item>
+		    <el-form-item>
+		        <el-input type="password" placeholder="password" v-model="password" ></el-input>
+		    </el-form-item>
+		    <div class="login-btn">
+		        <el-button type="primary" @click="login">登录</el-button>
+		    </div>
+			</el-form>
+	</div>
 </template>
 <script>
   export default {
@@ -41,6 +43,18 @@
 </script>
 
 <style scoped>
+	.formBox{
+		width: 100%;
+		height: 100%;
+		background: #4a6969;
+	}
+	.demo-ruleForm{
+		width:200px;
+		position: relative;  
+ 		top: 50%;  
+ 		transform: translateY(-50%);
+ 		left: 45%;
+	}
    .login-wrap{
         position: relative;
         width:100%;
